@@ -1,0 +1,144 @@
+:root {
+  --primary-color: #3fd0d4;
+  --heading-color: #212121;
+  --nav-color: #212121;
+  --nav-hover-color: #3fd0d4;
+  --white-color: #fff;
+  --primary-color-dark: #3abdc1;
+  --text-vague-color: #505050;
+  --text-super-vague-color: #a9a9a9;
+  --text-color: #212121;
+
+  --text-line-height: 1.6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--heading-color);
+  position: relative;
+}
+
+.container {
+}
+
+.container-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-large {
+  max-width: 130rem;
+}
+
+.container-medium {
+  width: 66.66667%;
+}
+
+.container-small {
+  max-width: 50%;
+}
+
+/* heading */
+.sub-heading {
+  display: block;
+  font-family: Satisfy, cursive;
+  font-size: 3.3rem;
+  line-height: 1.8em;
+  color: var(--primary-color);
+  margin-bottom: -6px;
+  text-align: center;
+}
+
+.secondary-heading {
+  font-size: 6.5rem;
+  line-height: 1.092307692307692em;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  text-align: center;
+}
+
+.description-heading {
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  margin-top: 1.2rem;
+  display: block;
+  text-align: center;
+  color: var(--text-vague-color);
+}
+/* input */
+.input::placeholder {
+  font-family: Poppins, sans-serif;
+}
+
+/* button */
+.close-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 4.2rem;
+  height: 4.2rem;
+  top: 1.2rem;
+  right: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.close-btn__icon {
+  font-size: 2.6rem;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* DOT */
+.dot-box {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+
+  background-color: rgba(63, 208, 212, 0.5);
+  cursor: pointer;
+}
+
+.dot:hover,
+.dot.active {
+  background-color: var(--primary-color);
+}
+
+/* dot for screen have width below 88em (1408px)  */
+.dot--88em {
+  display: none;
+}
+
+.dot--56em {
+  display: none;
+}
+
+.dot--41em {
+  display: none;
+}
