@@ -20,7 +20,8 @@ searchModalEl.onclick = closeSearchEl.onclick = function (e) {
 };
 
 ////////////////////////////////////////////////////
-//OPEN AND CLOSE MENU SLIDER
+// OPEN AND CLOSE MENU SLIDER
+// OPEN MENU FOR MINI SCREEN (SCREEN HAVE WIDTH BELOW 1200px)
 ////////////////////////////////////////////////////
 
 const openMenuSliderEl = document.querySelector(".nav-icons__link--menu");
@@ -29,11 +30,15 @@ const closeMenuSliderEl = document.querySelector(".infor__close");
 const menuSliderEl = document.querySelector(".header__infor-box");
 const menuSliderContainerEl = document.querySelector(".header__infor");
 
+const miniScreenMenuEl = document.querySelector(".header__nav-list-father");
+
 // open menu slider
 openMenuSliderEl.onclick = function (e) {
   const windowWidth = window.innerWidth;
   if (windowWidth > 1200) {
     menuSliderEl.classList.add("active");
+  } else {
+    miniScreenMenuEl.classList.toggle("active");
   }
 };
 
@@ -369,16 +374,6 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sliderEl);
-
-////////////////////////////////////////////////////
-// OPEN MENU FOR MINI SCREEN (SCREEN HAVE WIDTH BELOW 1200px)
-////////////////////////////////////////////////////
-const contactMenuEl = document.querySelector(".nav-icons__link--menu");
-const miniScreenMenuEl = document.querySelector(".header__nav-list-father");
-contactMenuEl.onclick = function (e) {
-  e.preventDefault();
-  miniScreenMenuEl.classList.toggle("active");
-};
 
 ////////////////////////////////////////////////////
 // SCROLL LOOP
