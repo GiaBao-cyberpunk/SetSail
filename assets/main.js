@@ -38,6 +38,7 @@ openMenuSliderEl.onclick = function (e) {
   if (windowWidth > 1200) {
     menuSliderEl.classList.add("active");
   } else {
+    e.preventDefault();
     miniScreenMenuEl.classList.toggle("active");
   }
 };
