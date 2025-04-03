@@ -1199,10 +1199,16 @@
   align-items: center;
 }
 
+.resort__scroller {
+  display: flex;
+}
+
 .resort__places {
   --_gap: 6rem;
   display: flex;
   gap: var(--_gap);
+  width: 80%;
+  margin: 0 auto;
 }
 
 .resort__item {
